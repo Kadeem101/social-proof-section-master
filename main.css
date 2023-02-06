@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  padding: 4rem 2rem 2rem 2rem;
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9375rem;
+  background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 23rem, 20rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  line-height: 0.8;
+  margin-bottom: 1.5rem;
+  color: hsl(300deg, 43%, 22%);
+  font-size: 2.5rem;
+}
+
+p {
+  color: hsl(303deg, 10%, 53%);
+}
+
+.sec1__right, .sec1__rating {
+  flex-direction: column;
+  display: flex;
+}
+.sec1__left p {
+  font-weight: 500;
+  font-size: 1.0313rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.sec1__right {
+  gap: 1rem;
+}
+.sec1__rating {
+  background-color: hsl(300deg, 24%, 96%);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  line-height: 1.2;
+}
+.sec1__rating p {
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+}
+.sec1__stars {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sec2 {
+  margin-top: 2rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+.sec2__card {
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 0.4rem;
+  padding: 2.2rem 2rem 2rem 2rem;
+}
+.sec2__cust_detail {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sec2__pp {
+  width: 2.5rem;
+  border-radius: 100%;
+}
+.sec2__status {
+  flex-direction: column;
+  display: flex;
+  line-height: 1.2;
+}
+.sec2__name {
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.9688rem;
+}
+.sec2__ver_buy {
+  color: hsl(333deg, 80%, 67%);
+  font-weight: 500;
+}
+.sec2__desc {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+}
+
+@media (min-width: 50rem) {
+  .sec1__right {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sec1__rating {
+    padding: 1rem 1.5rem;
+  }
+  .sec1__rating p {
+    text-align: center;
+  }
+  .sec2__card {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .sec1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .sec1__left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .sec1__left P, .sec1__left h1 {
+    text-align: left;
+  }
+  .sec1__right {
+    flex-direction: column;
+    flex: 1;
+  }
+  .sec1__rating {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .sec2 {
+    flex-direction: row;
+  }
+}
+@media (min-width: 89.9375rem) {
+  body {
+    padding: 10rem 10rem;
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40rem, 80rem;
+  }
+  .sec1 {
+    justify-content: space-between;
+  }
+  .sec1__left {
+    flex: none;
+    width: 25rem;
+  }
+  .sec1__left p {
+    margin-bottom: 0;
+  }
+  .sec1__left h1 {
+    font-size: 3rem;
+    line-height: 0.82;
+    margin-bottom: 1.4rem;
+  }
+  .sec1__one {
+    align-self: flex-start;
+    padding-right: 4rem;
+  }
+  .sec1__two {
+    align-self: center;
+    padding-right: 2.5rem;
+  }
+  .sec1__three {
+    align-self: flex-end;
+    padding-right: 4rem;
+  }
+  .sec1__right {
+    flex-direction: column;
+    justify-content: center;
+    flex: none;
+    width: 30rem;
+  }
+  .sec1__rating {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .sec2 {
+    gap: 2rem;
+    margin-top: 4rem;
+    height: 18rem;
+  }
+  .sec2__pp {
+    width: 2rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 100%;
+  }
+  .sec2__cust_detail {
+    margin-bottom: 1.2rem;
+  }
+  .sec2__card {
+    padding: 3rem;
+  }
+  .sec2__one {
+    align-self: flex-start;
+  }
+  .sec2__two {
+    align-self: center;
+  }
+  .sec2__three {
+    align-self: flex-end;
+  }
+}/*# sourceMappingURL=main.css.map */
